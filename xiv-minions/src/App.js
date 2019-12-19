@@ -9,13 +9,9 @@ function App() {
   return (
     <div className='App'>      
       <h1>FFXIV Minions</h1>
-        <Route exact path='/'>
-          <SearchForm />   
-          <MinionList />
-        </Route>
-        <Route path='/:id'>
-          <MinionPage />
-        </Route>
+      <Route exact path='/' component={SearchForm} />
+      <Route exact path='/' component={MinionList} />
+      <Route path='/:id' component={MinionPage} />
       <div className='footer'>
           <p>©2010-2019 SQUARE ENIX CO., LTD. All Rights Reserved.</p>
       </div>      
