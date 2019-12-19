@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Spinner, Tooltip } from 'reactstrap';
+import { Spinner, Tooltip, Button } from 'reactstrap';
 
 import { getSoloMinion } from '../store/actions';
 
@@ -34,7 +34,7 @@ const MinionPage = props => {
                         <p>{props.soloMinion.DescriptionEnhanced}</p>
                     </div>
                     <p className='minion-tooltip'>{props.soloMinion.Tooltip}</p>
-                    <Link to='/'>Return</Link>
+                    <Button onClick={() => props.history.push('/')}>Return</Button>
                 </div>
             )}
         </>
