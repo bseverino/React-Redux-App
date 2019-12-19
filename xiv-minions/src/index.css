@@ -46,7 +46,8 @@ body {
 
 .App {
   margin: 0 auto -50px;
-  min-height: 100%;
+  position: relative;
+  min-height: 100vh;
   width: 90%;
   flex: 1 0 auto;
   display: flex;
@@ -55,7 +56,9 @@ body {
 }
 
 .footer {
-  margin-top: 100px;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
 }
 
 .search-form {
@@ -66,12 +69,13 @@ body {
   width: 90%;
   display: flex;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .minion-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .minion-card {
@@ -81,7 +85,7 @@ body {
   align-items: center;
   text-align: center;
   width: 200px;
-  margin-bottom: 50px;
+  margin: 0 10px 50px;
 }
 
 .minion-icon {
@@ -95,7 +99,7 @@ body {
 
 .minion-page {
   max-width: 650px;
-  margin-top: 50px;
+  margin: 50px 0 100px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
