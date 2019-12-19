@@ -8,6 +8,8 @@ export const FETCH_SOLOMINION_START = 'FETCH_SOLOMINION_START';
 export const FETCH_SOLOMINION_SUCCESS = 'FETCH_SOLOMINION_SUCCESS';
 export const FETCH_SOLOMINION_FAILURE = 'FETCH_SOLOMINION_FAILURE';
 
+export const SET_SEARCH_TERM = 'SET_SEARCH_TERM';
+
 export const getMinions = () => dispatch => {
     dispatch({ type: FETCH_MINIONS_START });
     axios
@@ -30,4 +32,8 @@ export const getSoloMinion = id => dispatch => {
         .catch(err => {
             dispatch({ type: FETCH_SOLOMINION_FAILURE, payload: err.response.Message });
         })
+};
+
+export const setSearchTerm = searchText => dispatch => {
+    dispatch({ type: SET_SEARCH_TERM, payload: searchText });
 };

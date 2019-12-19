@@ -3,12 +3,14 @@ import { Route } from 'react-router-dom';
 
 import MinionPage from './components/MinionPage';
 import MinionList from './components/MinionList';
+import SearchForm from './components/SearchForm';
 
 function App() {
   return (
     <div className='App'>      
       <h1>FFXIV Minions</h1>
-        <Route exact path='/'>   
+        <Route exact path='/'>
+          <SearchForm />   
           <MinionList />
         </Route>
         <Route path='/:id'>

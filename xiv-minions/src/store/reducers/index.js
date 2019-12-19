@@ -4,14 +4,16 @@ import {
     FETCH_MINIONS_FAILURE,
     FETCH_SOLOMINION_START,
     FETCH_SOLOMINION_SUCCESS,
-    FETCH_SOLOMINION_FAILURE
+    FETCH_SOLOMINION_FAILURE,
+    SET_SEARCH_TERM
 } from '../actions';
 
 const initialState = {
     minions: null,
     isFetching: false,
     error: '',
-    soloMinion: null
+    soloMinion: null,
+    searchTerm: ''
 };
 
 const reducer = (state = initialState, action) => {
@@ -50,6 +52,11 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 isFetching: false,
                 error: action.payload
+            };
+        case SET_SEARCH_TERM:
+            return {
+                ...state,
+                searchTerm: action.payload
             };
         default:
             return state;

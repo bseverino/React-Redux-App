@@ -19,7 +19,7 @@ const MinionList = props => {
             {props.minions && (
                 <div className='minion-list fade-in'>
                     {props.minions.map(minion => {
-                        if (minion.Name) {
+                        if (minion.Name && minion.Name.toLowerCase().includes(props.searchTerm.toLowerCase())) {
                             return (
                                 <MinionCard
                                     key={minion.ID}
@@ -38,7 +38,8 @@ const mapStateToProps = state => {
     return {
         minions: state.minions,
         isFetching: state.isFetching,
-        error: state.error
+        error: state.error,
+        searchTerm: state.searchTerm
     }
 };
 
