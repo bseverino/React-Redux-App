@@ -3,7 +3,6 @@
     "name": "xiv-minions",
     "builds": [{ "src": "xiv-minions/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
     "routes": [
-        { "src": "/static/(.*)", "dest": "xiv-minions/static/$1" },
-        { "src": "/(.*)", "dest": "xiv-minions/index.html" }
+        { "src": "/(.*)", "dest": "/xiv-minions/$1" }
     ]
 }
