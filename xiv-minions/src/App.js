@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
+import logo from './img/logo.png';
+
 import MinionPage from './components/MinionPage';
 import MinionList from './components/MinionList';
 import SearchForm from './components/SearchForm';
@@ -8,7 +10,7 @@ import SearchForm from './components/SearchForm';
 function App() {
   return (
     <div className='App'>      
-      <h1>FFXIV Minions</h1>
+      <img className='logo' src={logo} alt='Final Fantasy XIV Minions' />
       <Route exact path='/' component={SearchForm} />
       <Route exact path='/' component={MinionList} />
       <Route path='/:id' component={MinionPage} />
