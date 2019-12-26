@@ -1,11 +1,18 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import styled from 'styled-components';
 
 import logo from './img/logo.png';
 
 import MinionPage from './components/MinionPage';
 import MinionList from './components/MinionList';
 import SearchForm from './components/SearchForm';
+
+const Footer = styled.div`
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+`;
 
 function App() {
   return (
@@ -14,9 +21,9 @@ function App() {
       <Route exact path='/' component={SearchForm} />
       <Route exact path='/' component={MinionList} />
       <Route path='/:id' component={MinionPage} />
-      <div className='footer'>
+      <Footer>
           <p>©2010-2019 SQUARE ENIX CO., LTD. All Rights Reserved.</p>
-      </div>      
+      </Footer>      
     </div>
   );
 }

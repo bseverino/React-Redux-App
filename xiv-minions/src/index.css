@@ -66,48 +66,6 @@ body {
   align-items: center;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  height: 50px;
-}
-
-.search-form {
-  margin-bottom: 50px;
-}
-
-.minion-container {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 100px;
-}
-
-.minion-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.minion-card {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 200px;
-  margin: 0 10px 50px;
-}
-
-.minion-icon {
-  margin-bottom: 10px;
-}
-
-.minion-name {
-  text-transform: uppercase;
-  width: 192px;
-}
-
 .minion-page {
   max-width: 650px;
   margin: 50px 0 100px;

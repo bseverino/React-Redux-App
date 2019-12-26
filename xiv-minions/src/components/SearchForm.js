@@ -1,8 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Form, FormGroup, Input } from 'reactstrap';
+import styled from 'styled-components';
+import { Form as ReactForm, FormGroup, Input } from 'reactstrap';
 
 import { setSearchTerm } from '../store/actions';
+
+const Form = styled(ReactForm)`
+    margin-bottom: 50px;
+`;
 
 const SearchForm = props => {
     const handleChange = e => {
@@ -11,7 +16,7 @@ const SearchForm = props => {
     };
 
     return (
-        <Form className='search-form'>
+        <Form>
             <FormGroup>
                 <Input
                     type='text'
