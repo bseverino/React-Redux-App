@@ -5,6 +5,8 @@ import { Spinner } from 'reactstrap';
 
 import { getMinions } from '../store/actions';
 
+import { fadeIn } from './styles';
+
 import MinionCard from './MinionCard';
 
 const MinionContainer = styled.div`
@@ -18,6 +20,7 @@ const List = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    animation: ${fadeIn} ease 1s;
 `;
 
 const MinionList = props => {
@@ -32,7 +35,7 @@ const MinionList = props => {
         <MinionContainer>
             {props.isFetching && <Spinner style={{ width: '3rem', height: '3rem' }} color='light' />}
             {props.minions && (
-                <List className='fade-in'>
+                <List>
                     {props.minions.map(minion => {
                         if (minion.Name && minion.Name.toLowerCase().includes(props.searchTerm.toLowerCase())) {
                             return (
