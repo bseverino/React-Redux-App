@@ -8,6 +8,17 @@ import MinionPage from './components/MinionPage';
 import MinionList from './components/MinionList';
 import SearchForm from './components/SearchForm';
 
+const Wrapper = styled.div`
+  margin: 0 auto -50px;
+  position: relative;
+  min-height: 100vh;
+  width: 90%;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 const Footer = styled.div`
   position: absolute;
   bottom: 0;
@@ -16,7 +27,7 @@ const Footer = styled.div`
 
 function App() {
   return (
-    <div className='App'>      
+    <Wrapper>      
       <img className='logo' src={logo} alt='Final Fantasy XIV Minions' />
       <Route exact path='/' component={SearchForm} />
       <Route exact path='/' component={MinionList} />
@@ -24,7 +35,7 @@ function App() {
       <Footer>
           <p>©2010-2019 SQUARE ENIX CO., LTD. All Rights Reserved.</p>
       </Footer>      
-    </div>
+    </Wrapper>
   );
 }
 

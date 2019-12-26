@@ -10,7 +10,6 @@ import { fadeIn } from './styles';
 import MinionCard from './MinionCard';
 
 const MinionContainer = styled.div`
-    width: 90%;
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
